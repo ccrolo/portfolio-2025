@@ -1,0 +1,13 @@
+---
+const { id, title } = Astro.props
+---
+
+<a href={id}>{title}</a>
+
+<style>
+  a {
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 16px;
+  }
+</style>

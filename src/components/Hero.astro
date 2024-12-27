@@ -1,0 +1,81 @@
+---
+import portrait from '../assets/portrait.svg'
+---
+
+<section>
+  <div class="hero-text">
+    <h1>cristina romero</h1>
+    <h2>web developer</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sit amet
+      tellus quis dolor rhoncus lacinia vel a nisl. Vivamus facilisis purus
+      elit,
+    </p>
+  </div>
+
+  <figure>
+    <img class="w-48" src={portrait.src} alt="" />
+  </figure>
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 80px;
+    align-items: center;
+  }
+
+  @media (min-width: 1024px) {
+    section {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding-top: 150px;
+    }
+  }
+
+  .hero-text {
+    text-transform: capitalize;
+    grid-column: span 2;
+    max-width: 610px;
+    display: grid;
+    place-items: center;
+  }
+
+  h1 {
+    font-family: var(--font-secondary);
+    color: var(--secondary-100);
+    font-size: 44px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: 1024px) {
+    h1 {
+      font-size: 90px;
+    }
+    h2 {
+      font-size: 48px;
+    }
+  }
+
+  figure {
+    width: 140px;
+  }
+  @media (min-width: 1024px) {
+    figure {
+      width: 230px;
+      justify-self: flex-end;
+    }
+  }
+
+  img {
+    object-fit: cover;
+  }
+</style>

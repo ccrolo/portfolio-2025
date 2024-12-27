@@ -1,0 +1,143 @@
+---
+import Header from '../components/Header.astro'
+import Hero from '../components/Hero.astro'
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/portrait.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Cristina's Portfolio</title>
+  </head>
+  <body class="">
+    <Header />
+    <Hero />
+    <section id="about">
+      <h3>About me</h3>
+    </section>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  @font-face {
+    font-family: 'Double_Tracker';
+    src: url('/fonts/Double_Tracker.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  :root {
+    --bg-primary: #dad7cf;
+    --primary-100: #34302d;
+    --secondary-100: #d7322d;
+    /* #34302D */
+    --font-primary-100: 'Inter', system-ui;
+    --font-primary-200: 'Cutive Mono', monospace;
+    --font-secondary: 'Double_Tracker', serif;
+  }
+
+  /* GLOBAL STYLES */
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-height: 100dvh;
+    font-family: 'Inter', serif;
+    background: var(--bg-primary);
+    color: var(--primary-100);
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
+
+  section {
+    max-width: 1250px;
+    margin: 0 30px;
+  }
+
+  @media (min-width: 1250px) {
+    section {
+      max-width: 1250px;
+      margin: 0 auto;
+    }
+  }
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  p {
+    text-wrap: pretty;
+    font-family: var(--font-primary-200);
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+    font-weight: 100;
+    width: fit-content;
+    margin: 0;
+  }
+
+  img,
+  video,
+  svg {
+    height: auto;
+    max-width: 100%;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    color: var(--primary-100);
+    text-decoration: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+      transition: none;
+    }
+  }
+  h3 {
+    margin: 500px 0;
+  }
+</style>
