@@ -1,81 +1,151 @@
 ---
-import portrait from '../assets/portrait.svg'
+import { basics } from '@cv'
+import { Icon } from 'astro-icon/components'
+
+const { name, position, label, image, email, phone, profiles, location } =
+  basics
+const { city } = location
 ---
 
 <section>
   <div class="hero-text">
-    <h1>cristina romero</h1>
-    <h2>web developer</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sit amet
-      tellus quis dolor rhoncus lacinia vel a nisl. Vivamus facilisis purus
-      elit,
-    </p>
+    <h1>{name}</h1>
+    <h2>{position}</h2>
+    <p>{label}</p>
+    <div class="location">
+      <Icon name="location" />
+      <p>{city}</p>
+    </div>
+    <div class="contact">
+      {
+        email && (
+          <a
+            href={`mailto:{${email}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            title={`Enviar correo a ${email}`}
+          >
+            <Icon name="mail" />
+          </a>
+        )
+      }
+      {
+        phone && (
+          <a
+            href={`tel:{${phone}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            title={`Llamar a ${phone}`}
+          >
+            <Icon name="phone" />
+          </a>
+        )
+      }
+      {
+        profiles.map((profile) => {
+          const { network, url, icon } = profile
+          return (
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={network}
+            >
+              <Icon name={icon} />
+            </a>
+          )
+        })
+      }
+    </div>
   </div>
-
   <figure>
-    <img class="w-48" src={portrait.src} alt="" />
+    <img class="w-48" src={image} alt="" />
   </figure>
-</section>
 
-<style>
-  section {
-    display: flex;
-    flex-direction: column-reverse;
-    padding-top: 80px;
-    align-items: center;
-  }
-
-  @media (min-width: 1024px) {
+  <style>
     section {
+      display: flex;
+      flex-direction: column-reverse;
+      padding-top: 80px;
+      align-items: flex-start;
+    }
+
+    @media (min-width: 1024px) {
+      section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding-top: 150px;
+      }
+    }
+
+    .hero-text {
+      grid-column: span 2;
+      max-width: 670px;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      padding-top: 150px;
+      place-items: center;
+      justify-items: start;
     }
-  }
 
-  .hero-text {
-    text-transform: capitalize;
-    grid-column: span 2;
-    max-width: 610px;
-    display: grid;
-    place-items: center;
-  }
+    @media (min-width: 1024px) {
+      section {
+        justify-items: start;
+      }
+    }
 
-  h1 {
-    font-family: var(--font-secondary);
-    color: var(--secondary-100);
-    font-size: 44px;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-  }
-
-  h2 {
-    font-weight: 700;
-    font-size: 36px;
-    margin-bottom: 30px;
-  }
-
-  @media (min-width: 1024px) {
     h1 {
-      font-size: 90px;
+      font-family: var(--font-secondary);
+      color: var(--secondary-100);
+      font-size: 44px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
     }
+
     h2 {
-      font-size: 48px;
+      font-weight: 700;
+      font-size: 36px;
+      margin-bottom: 30px;
+      text-transform: capitalize;
+      letter-spacing: 4px;
     }
-  }
 
-  figure {
-    width: 140px;
-  }
-  @media (min-width: 1024px) {
+    @media (min-width: 1024px) {
+      h1 {
+        font-size: 90px;
+      }
+      h2 {
+        font-size: 48px;
+      }
+    }
+
+    .location {
+      display: flex;
+      gap: 10px;
+      padding: 20px 0;
+    }
+
+    .contact {
+      display: flex;
+      gap: 20px;
+      padding: 10px 0;
+    }
+    [data-icon] {
+      font-size: 1.5rem;
+      color: var(--primary-100);
+      height: 30px;
+    }
     figure {
-      width: 230px;
-      justify-self: flex-end;
+      width: 140px;
     }
-  }
 
-  img {
-    object-fit: cover;
-  }
-</style>
+    @media (min-width: 1024px) {
+      figure {
+        width: 230px;
+        justify-self: flex-end;
+      }
+    }
+
+    img {
+      object-fit: cover;
+    }
+  </style>
+</section>

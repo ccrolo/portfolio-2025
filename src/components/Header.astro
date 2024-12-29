@@ -1,23 +1,35 @@
 ---
-import Remove from '@/assets/icons/Remove.astro'
-import HeaderElement from './HeaderElement.astro'
+import { Icon } from 'astro-icon/components'
+import NavElement from './NavElement.astro'
 ---
 
 <header>
-  <div class="nav-container">
-    <Remove class="remove" />
+  <div id="menu-container">
+    <button id="menu-icon">
+      <Icon name="remove" />
+    </button>
+
     <nav>
-      <HeaderElement id={'#about'} title={'about me'} />
-      <HeaderElement id={'#experience'} title={'experience'} />
-      <HeaderElement id={'#projects'} title={'projects'} />
-      <HeaderElement id={'#skills'} title={'skills'} />
-      <HeaderElement id={'#contact'} title={'contact'} />
+      <NavElement id={'#about'} title={'about me'} />
+      <NavElement id={'#experience'} title={'experience'} />
+      <NavElement id={'#projects'} title={'projects'} />
+      <NavElement id={'#skills'} title={'skills'} />
+      <NavElement id={'#contact'} title={'contact'} />
     </nav>
   </div>
 </header>
 
+<script>
+  const closeMenu = document.getElementById('menu-icon')
+  const navContainer = document.getElementById('menu-container')
+
+  closeMenu?.addEventListener('click', () => {
+    navContainer && (navContainer.style.display = 'none')
+  })
+</script>
+
 <style>
-  .nav-container {
+  #menu-container {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -40,16 +52,46 @@ import HeaderElement from './HeaderElement.astro'
   }
 
   @media (min-width: 1024px) {
-    .nav-container {
+    #menu-container {
+      display: flex;
       padding: 20px 30px;
       position: fixed;
+      left: 0;
+      right: 0;
       width: 100%;
+      border: none;
+      margin: 0;
+      bottom: unset;
+      justify-content: end;
     }
     nav {
+      display: flex;
       justify-content: flex-end;
-      max-width: 1250px;
+      width: 100%;
+      max-width: 1024px;
       margin: 0 auto;
       font-size: 16px;
     }
+  }
+
+  #menu-icon {
+    background: transparent;
+    display: grid;
+    place-items: center;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  @media (min-width: 1024px) {
+    #menu-icon {
+      display: none;
+    }
+  }
+
+  [data-icon='remove'] {
+    font-size: 2rem;
+    color: var(--primary-100);
   }
 </style>
