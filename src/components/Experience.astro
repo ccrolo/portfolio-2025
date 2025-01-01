@@ -1,0 +1,98 @@
+---
+import Section from '@/layouts/Section.astro'
+import { work } from '@cv'
+---
+
+<Section id="experience" title="experiencia">
+  {
+    work.map((job) => {
+      const { name, position, startDate, endDate, summary } = job
+      return (
+        <article>
+          <div class="info-position">
+            <h4>
+              {' '}
+              <span class="circle" />
+              {name}
+            </h4>
+            <p class="date">
+              {startDate ? startDate : 'Actualidad'} -
+              {endDate ? endDate : 'Actualidad'}
+            </p>
+            <p>{position}</p>
+          </div>
+          <ul>
+            {summary.split('\n').map((line) => (
+              <Fragment>
+                <li>
+                  <span>-</span> {line}
+                </li>
+              </Fragment>
+            ))}
+          </ul>
+        </article>
+      )
+    })
+  }
+</Section>
+
+<style>
+  article {
+    display: grid;
+    gap: 20px;
+  }
+  @media (min-width: 768px) {
+    article {
+      padding: 30px;
+    }
+  }
+
+  h4 {
+    position: relative;
+  }
+  .circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--secondary-100);
+    display: inline-block;
+    left: -20px;
+    top: 8px;
+    position: absolute;
+  }
+  @media (min-width: 768px) {
+    .circle {
+      left: -30px;
+    }
+  }
+
+  .info-position {
+    display: grid;
+    padding: 20px 0 0 20px;
+
+    p {
+      font-family: var(--font-primary-100);
+      font-size: 18px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .info-position {
+      grid-template-columns: 1fr 1fr;
+      padding: 0;
+    }
+    .date {
+      justify-self: flex-end;
+    }
+  }
+  li {
+    position: relative;
+    padding-left: 20px;
+    padding-bottom: 10px;
+  }
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+</style>

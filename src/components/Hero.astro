@@ -68,52 +68,32 @@ const { city } = location
       flex-direction: column-reverse;
       padding-top: 80px;
       align-items: flex-start;
+      position: relative;
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 425px) {
       section {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    @media (min-width: 480px) {
+      section {
         padding-top: 150px;
       }
     }
 
     .hero-text {
-      grid-column: span 2;
+      grid-column: span 3;
       max-width: 670px;
       display: grid;
       place-items: center;
       justify-items: start;
     }
 
-    @media (min-width: 1024px) {
-      section {
-        justify-items: start;
-      }
-    }
-
-    h1 {
-      font-family: var(--font-secondary);
-      color: var(--secondary-100);
-      font-size: 44px;
-      letter-spacing: 6px;
-      text-transform: uppercase;
-    }
-
-    h2 {
-      font-weight: 700;
-      font-size: 36px;
-      margin-bottom: 30px;
-      text-transform: capitalize;
-      letter-spacing: 4px;
-    }
-
-    @media (min-width: 1024px) {
-      h1 {
-        font-size: 90px;
-      }
-      h2 {
-        font-size: 48px;
+    @media (min-width: 768px) {
+      .hero-text {
+        grid-column: span 2;
       }
     }
 
@@ -134,13 +114,26 @@ const { city } = location
       height: 30px;
     }
     figure {
-      width: 140px;
+      position: absolute;
+      width: 82px;
+      right: 10px;
+      top: 72px;
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 480px) {
+      figure {
+        width: 126px;
+        top: 130px;
+        /* justify-self: flex-end;
+        margin: unset;
+        position: unset; */
+      }
+    }
+    @media (min-width: 768px) {
       figure {
         width: 230px;
         justify-self: flex-end;
+        margin: unset;
       }
     }
 

@@ -1,0 +1,71 @@
+---
+import Section from '@/layouts/Section.astro'
+import { basics } from '@cv'
+import { Icon } from 'astro-icon/components'
+
+const { summary, hobbies } = basics
+---
+
+<Section id="about" title="about me">
+  <div class="hobbies">
+    {
+      hobbies.map((hobby) => (
+        <div class="hobby">
+          <Icon name={hobby.icon} />
+        </div>
+      ))
+    }
+  </div>
+  {
+    summary.split('\n').map((line) => (
+      <Fragment>
+        <p> {line}</p>
+      </Fragment>
+    ))
+  }
+</Section>
+
+<style>
+  p {
+    padding: 10px 0;
+  }
+  br {
+    margin: 30px 0;
+  }
+
+  .hobbies {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+    position: absolute;
+    bottom: -80px;
+    div {
+      height: 30px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hobbies {
+      inset: 0 0 auto auto;
+    }
+  }
+</style>
+
+<script>
+  //   document.addEventListener('DOMContentLoaded', () => {
+  //     const hobbies = document.querySelectorAll('.hobby')
+  //     let second = 0.1
+
+  //     const observer = new IntersectionObserver((entries) => {
+  //       entries.forEach((entry) => {
+  //         const element = entry.target as HTMLElement
+
+  //         if (entry.isIntersecting) {
+  //           element.style.animation = `slide-left ${(second += 0.04)}s linear both`
+  //         }
+  //       })
+  //     })
+  //     hobbies.forEach((hobby) => observer.observe(hobby))
+  //   })
+  // Animación fade-in
+</script>
