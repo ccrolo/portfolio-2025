@@ -166,17 +166,20 @@
     {
       "name": "Xeria Digital",
       "description": "Web Corporativa de Xeria Digital, desarrollada con HTML, CSS y Javascript.",
-      "url": "https://www.xeria.es/"
-    },
-    {
-      "name": "Disgenet Plus",
-      "description": "Extensa base de datos de asociaciones entre genes y enfermedades, desarrollada con React, CSS, React Data Grid. Desde la versión 18 a la 22.",
-      "url": "https://disgenet.com/"
+      "url": "https://www.xeria.es/",
+      "image": "src/assets/xeria.png"
     },
     {
       "name": "Madrid Fusión 2024",
       "description": "Landing page para la feria de alimentación Madrid Fusión de 2024, utilizando tecnologías como HTML, CSS, Javascript y JQuery.",
-      "url": "https://2024.madridfusion.net/"
+      "url": "https://2024.madridfusion.net/",
+      "image": "src/assets/madrid-fusion.png"
+    },
+    {
+      "name": "Disgenet Plus",
+      "description": "Extensa base de datos de asociaciones entre genes y enfermedades, desarrollada con React, CSS, React Data Grid. Desde la versión 18 a la 22.",
+      "url": "https://disgenet.com/",
+      "image": "src/assets/disgenet.png"
     }
   ]
 }
