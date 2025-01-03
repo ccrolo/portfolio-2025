@@ -3,7 +3,7 @@
     "name": "Cristina Romero",
     "position": "Web Developer",
     "label": "Web Developer con <strong>3 años</strong> de experiencia, especializada en el diseño y desarrollo de aplicaciones y sitios web <strong>atractivos, intuitivos y funcionales.</strong>",
-    "image": "src/assets/portrait.svg",
+    "image": "assets/portrait.svg",
     "email": "cris.rom.lopez@gmail.com",
     "phone": "+34 660827820",
     "url": "https://cristina-romero-portfolio.netlify.app/",
@@ -125,19 +125,19 @@
       "name": "Xeria Digital",
       "description": "Web Corporativa de Xeria Digital, desarrollada con HTML, CSS y Javascript. Desarrollo total de la website y contribución en el diseño.",
       "url": "https://www.xeria.es/",
-      "image": "src/assets/xeria.png"
+      "image": "assets/xeria.png"
     },
     {
       "name": "Madrid Fusión 2024",
       "description": "Landing page para la feria de alimentación Madrid Fusión de 2024, utilizando tecnologías como HTML, CSS, Javascript y JQuery. Maquetación web partiendo del diseño aportado por el cliente.",
       "url": "https://2024.madridfusion.net/",
-      "image": "src/assets/madrid-fusion.png"
+      "image": "assets/madrid-fusion.png"
     },
     {
       "name": "Disgenet Plus",
       "description": "Extensa base de datos de asociaciones entre genes y enfermedades, desarrollada con React, CSS, React Data Grid. Desarrollo de funcionalidades y mejora del código desde la versión 18 a la 22.",
       "url": "https://disgenet.com/",
-      "image": "src/assets/disgenet.png"
+      "image": "assets/disgenet.png"
     }
   ]
 }
