@@ -7,16 +7,31 @@ import { Icon } from 'astro-icon/components'
 <Section id="experience" title="experiencia">
   {
     work.map((job) => {
-      const { name, logo, position, startDate, endDate, summary } = job
+      const { name, logo, url, position, startDate, endDate, summary } = job
       return (
         <article>
           <div class="info-position">
-            <h4>
-              {' '}
-              <span class="circle" />
-              {name}
-            </h4>
-            <Icon name={logo} />
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={name}
+            >
+              <h4>
+                {' '}
+                <span class="circle" />
+                {name}
+              </h4>
+            </a>
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={name}
+            >
+              <Icon name={logo} />
+            </a>
+
             <p class="position">{position}</p>
             <p class="date">
               {startDate ? startDate : 'Actualidad'} -
