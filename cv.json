@@ -31,33 +31,15 @@
       }
     ],
     "hobbies": [
-      {
-        "icon": "travel"
-      },
-      {
-        "icon": "photo"
-      },
-      {
-        "icon": "bike"
-      },
-      {
-        "icon": "code"
-      },
-      {
-        "icon": "japanese"
-      },
-      {
-        "icon": "music"
-      },
-      {
-        "icon": "ramen"
-      },
-      {
-        "icon": "puzzle"
-      },
-      {
-        "icon": "dogs"
-      }
+      "travel",
+      "photo",
+      "bike",
+      "code",
+      "japanese",
+      "music",
+      "ramen",
+      "puzzle",
+      "dogs"
     ]
   },
   "work": [
@@ -96,52 +78,26 @@
       "endDate": "2022-03"
     }
   ],
-
   "skills": [
     {
-      "name": "Javascript"
+      "category": "Languages",
+      "items": ["JavaScript", "Python", "R", "HTML"]
     },
     {
-      "name": "React"
+      "category": "Frontend Frameworks",
+      "items": ["React", "Astro"]
     },
     {
-      "name": "Astro"
+      "category": "CSS & Frameworks",
+      "items": ["CSS", "Bootstrap", "Tailwind"]
     },
     {
-      "name": "HTML"
+      "category": "Data Libraries",
+      "items": ["Pandas", "Matplotlib", "Numpy"]
     },
     {
-      "name": "CSS"
-    },
-    {
-      "name": "Bootstrap"
-    },
-    {
-      "name": "Tailwind"
-    },
-    {
-      "name": "Python"
-    },
-    {
-      "name": "R"
-    },
-    {
-      "name": "Pandas"
-    },
-    {
-      "name": "Matplotlib"
-    },
-    {
-      "name": "Numpy"
-    },
-    {
-      "name": "Figma"
-    },
-    {
-      "name": "Illustrator"
-    },
-    {
-      "name": "Photoshop"
+      "category": "Tools",
+      "items": ["Figma", "Illustrator", "Photoshop", "Git", "Vite"]
     }
   ],
   "languages": [
@@ -165,19 +121,19 @@
   "projects": [
     {
       "name": "Xeria Digital",
-      "description": "Web Corporativa de Xeria Digital, desarrollada con HTML, CSS y Javascript.",
+      "description": "Web Corporativa de Xeria Digital, desarrollada con HTML, CSS y Javascript. Desarrollo total de la website y contribución en el diseño.",
       "url": "https://www.xeria.es/",
       "image": "src/assets/xeria.png"
     },
     {
       "name": "Madrid Fusión 2024",
-      "description": "Landing page para la feria de alimentación Madrid Fusión de 2024, utilizando tecnologías como HTML, CSS, Javascript y JQuery.",
+      "description": "Landing page para la feria de alimentación Madrid Fusión de 2024, utilizando tecnologías como HTML, CSS, Javascript y JQuery. Maquetación web partiendo del diseño aportado por el cliente.",
       "url": "https://2024.madridfusion.net/",
       "image": "src/assets/madrid-fusion.png"
     },
     {
       "name": "Disgenet Plus",
-      "description": "Extensa base de datos de asociaciones entre genes y enfermedades, desarrollada con React, CSS, React Data Grid. Desde la versión 18 a la 22.",
+      "description": "Extensa base de datos de asociaciones entre genes y enfermedades, desarrollada con React, CSS, React Data Grid. Desarrollo de funcionalidades y mejora del código desde la versión 18 a la 22.",
       "url": "https://disgenet.com/",
       "image": "src/assets/disgenet.png"
     }

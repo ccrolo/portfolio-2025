@@ -1,0 +1,52 @@
+---
+import Section from '@/layouts/Section.astro'
+import { skills } from '@cv'
+---
+
+<Section id="skills" title="Habilidades">
+  <div class="skills-container">
+    {
+      skills.map((skill) => {
+        const { category, items } = skill
+        return (
+          <div>
+            <h4>{category}</h4>
+            <ul>
+              {items.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </div>
+        )
+      })
+    }
+  </div>
+</Section>
+
+<style>
+  .skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  h4 {
+    color: var(--secondary-100);
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px 0;
+  }
+
+  li {
+    padding: 5px 15px;
+    border: 1px solid var(--primary-100);
+    border-radius: 70px;
+    width: fit-content;
+    min-width: 80px;
+    text-align: center;
+    font-size: 16px;
+  }
+</style>

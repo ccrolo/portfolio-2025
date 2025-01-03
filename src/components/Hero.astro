@@ -56,6 +56,13 @@ const { city } = location
           )
         })
       }
+      <a
+        href="src/cristina_cv.pdf"
+        download="cristina_cv.pdf"
+        title="CV Cristina"
+      >
+        <Icon name="cv" /></a
+      >
     </div>
   </div>
   <figure>
@@ -108,10 +115,26 @@ const { city } = location
       gap: 20px;
       padding: 10px 0;
     }
+    a {
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      background-color: transparent;
+      border-radius: 50%;
+      transition: background-color 0.4s ease;
+    }
+    a:hover {
+      background-color: var(--secondary-100);
+    }
     [data-icon] {
       font-size: 1.5rem;
       color: var(--primary-100);
       height: 30px;
+      transition: filter 0.4s ease;
+    }
+    a:hover [data-icon] {
+      filter: sepia(0.2) brightness(4);
     }
     figure {
       position: absolute;
