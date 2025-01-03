@@ -4,18 +4,20 @@ import NavElement from './NavElement.astro'
 ---
 
 <header>
-  <div id="menu-container">
-    <button id="menu-icon">
-      <Icon name="remove" />
-    </button>
+  <div class="header-container">
+    <Icon name="menu" />
+    <div id="menu-container">
+      <button id="menu-icon">
+        <Icon name="remove" />
+      </button>
 
-    <nav>
-      <NavElement id={'#about'} title={'sobre mí'} />
-      <NavElement id={'#experience'} title={'experiencia'} />
-      <NavElement id={'#projects'} title={'proyectos'} />
-      <NavElement id={'#skills'} title={'habilidades'} />
-      <!-- <NavElement id={'#contact'} title={'contact'} /> -->
-    </nav>
+      <nav>
+        <NavElement id={'#about'} title={'sobre mí'} />
+        <NavElement id={'#experience'} title={'experiencia'} />
+        <NavElement id={'#projects'} title={'proyectos'} />
+        <NavElement id={'#skills'} title={'habilidades'} />
+      </nav>
+    </div>
   </div>
 </header>
 
@@ -29,6 +31,21 @@ import NavElement from './NavElement.astro'
 </script>
 
 <style>
+  .header-container {
+    background: #dad7cf75;
+    position: fixed;
+    backdrop-filter: blur(15px);
+    z-index: 5;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  @media (min-width: 768px) {
+    .header-container {
+      padding: 20px;
+    }
+  }
   #menu-container {
     position: fixed;
     top: 0;
@@ -36,7 +53,7 @@ import NavElement from './NavElement.astro'
     left: 30px;
     right: 30px;
     margin: 30px 0;
-    background: #dad7cf75;
+    background: #f4f1e78c;
     backdrop-filter: blur(15px);
     border: 3px solid var(--primary-100);
     border-radius: 15px;
@@ -44,6 +61,7 @@ import NavElement from './NavElement.astro'
     place-items: center;
     padding-bottom: 60px;
     z-index: 5;
+    display: none;
   }
   nav {
     display: grid;
@@ -52,19 +70,19 @@ import NavElement from './NavElement.astro'
     font-size: 18px;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     #menu-container {
       display: flex;
-      padding: 20px 30px;
-      position: fixed;
-      left: 0;
-      right: 0;
+      padding: 0;
+      position: unset;
       width: 100%;
       border: none;
       border-radius: 0;
       margin: 0;
       bottom: unset;
       justify-content: end;
+      background: transparent;
+      backdrop-filter: none;
     }
     nav {
       display: flex;
@@ -92,8 +110,14 @@ import NavElement from './NavElement.astro'
     }
   }
 
-  [data-icon='remove'] {
+  [data-icon] {
     font-size: 2rem;
     color: var(--primary-100);
+  }
+
+  @media (min-width: 768px) {
+    [data-icon] {
+      display: none;
+    }
   }
 </style>
