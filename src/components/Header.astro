@@ -5,9 +5,12 @@ import NavElement from './NavElement.astro'
 
 <header>
   <div class="header-container">
-    <Icon name="menu" />
-    <div id="menu-container">
-      <button id="menu-icon">
+    <button id="menu-icon">
+      <Icon name="menu" />
+    </button>
+
+    <div id="menu-container" class="closed">
+      <button id="remove-icon">
         <Icon name="remove" />
       </button>
 
@@ -22,11 +25,35 @@ import NavElement from './NavElement.astro'
 </header>
 
 <script>
-  const closeMenu = document.getElementById('menu-icon')
-  const navContainer = document.getElementById('menu-container')
+  const closeMenu = document.getElementById('remove-icon') as HTMLElement
+  const iconMenu = document.getElementById('menu-icon') as HTMLElement
+  const headerContainer = document.querySelector(
+    '.header-container'
+  ) as HTMLElement
+  const navElements = document.querySelectorAll('.nav-element')
 
-  closeMenu?.addEventListener('click', () => {
-    navContainer && (navContainer.style.display = 'none')
+  if (iconMenu) {
+    iconMenu.addEventListener('click', () => {
+      if (headerContainer) {
+        headerContainer.setAttribute('opened', '')
+      }
+    })
+  }
+
+  if (closeMenu) {
+    closeMenu.addEventListener('click', () => {
+      if (headerContainer) {
+        headerContainer.removeAttribute('opened')
+      }
+    })
+  }
+
+  navElements.forEach((element) => {
+    element.addEventListener('click', () => {
+      if (headerContainer) {
+        headerContainer.removeAttribute('opened')
+      }
+    })
   })
 </script>
 
@@ -40,6 +67,18 @@ import NavElement from './NavElement.astro'
     padding: 10px 20px;
     display: flex;
     justify-content: flex-end;
+    height: 60px;
+    transition: height 0.3s ease-in-out;
+    @starting-style {
+      height: 100vh;
+    }
+  }
+
+  .header-container[opened] {
+    height: 100vh;
+    @starting-style {
+      height: initial;
+    }
   }
   @media (min-width: 768px) {
     .header-container {
@@ -57,11 +96,23 @@ import NavElement from './NavElement.astro'
     backdrop-filter: blur(15px);
     border: 3px solid var(--primary-100);
     border-radius: 15px;
-    display: grid;
     place-items: center;
     padding-bottom: 60px;
     z-index: 5;
+    scale: 0;
+    transition:
+      scale 0.3s ease-in-out,
+      display 0.3s ease allow-discrete;
     display: none;
+  }
+
+  .header-container[opened] #menu-container {
+    scale: 1;
+    transition: scale 0.3s ease-in-out;
+    display: grid;
+    @starting-style {
+      scale: 0;
+    }
   }
   nav {
     display: grid;
@@ -83,6 +134,7 @@ import NavElement from './NavElement.astro'
       justify-content: end;
       background: transparent;
       backdrop-filter: none;
+      scale: 1;
     }
     nav {
       display: flex;
@@ -94,11 +146,24 @@ import NavElement from './NavElement.astro'
     }
   }
 
+  .header-container #remove-icon,
+  .header-container[opened] #menu-icon {
+    display: none;
+  }
+
+  .header-container[opened] #remove-icon,
+  .header-container #menu-icon {
+    display: block;
+  }
+
+  #remove-icon,
   #menu-icon {
     background: transparent;
     display: grid;
     place-items: center;
     border: none;
+  }
+  #remove-icon {
     position: absolute;
     top: 20px;
     right: 20px;
