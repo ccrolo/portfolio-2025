@@ -1,0 +1,91 @@
+---
+import Section from '@/layouts/Section.astro'
+import { skills, languages } from '@cv'
+---
+
+<Section id="skills" title="Habilidades">
+  <div class="skills-container">
+    {
+      skills.map((skill) => {
+        const { category, items } = skill
+        return (
+          <div>
+            <h4>{category}</h4>
+            <ul>
+              {items.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </div>
+        )
+      })
+    }
+  </div>
+  <div class="languages-container">
+    <h3>Idiomas</h3>
+    <ul>
+      {
+        languages.map((lang) => {
+          const { language, fluency } = lang
+          return (
+            <li>
+              {language}: <span>{fluency}</span>{' '}
+            </li>
+          )
+        })
+      }
+    </ul>
+  </div>
+</Section>
+
+<style>
+  .skills-container {
+    padding: 20px 0;
+    display: grid;
+    row-gap: 40px;
+    column-gap: 30px;
+  }
+
+  @media (min-width: 600px) {
+    .skills-container {
+      grid-template-columns: 1fr 1fr;
+      padding: 40px 0;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px 0;
+  }
+
+  li {
+    padding: 5px 15px;
+    border: 1px solid var(--primary-100);
+    border-radius: 70px;
+    width: fit-content;
+    min-width: 80px;
+    text-align: center;
+    font-size: 16px;
+    text-transform: capitalize;
+  }
+
+  .languages-container {
+    h3 {
+      color: var(--secondary-100);
+    }
+    li {
+      font-family: var(--font-primary-100);
+
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+  @media (min-width: 600px) {
+    .languages-container {
+      padding: 30px 0;
+    }
+  }
+</style>

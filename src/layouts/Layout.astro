@@ -1,6 +1,10 @@
 ---
+import About from '@/components/About.astro'
 import Header from '../components/Header.astro'
 import Hero from '../components/Hero.astro'
+import Experience from '@/components/Experience.astro'
+import Projects from '@/components/Projects.astro'
+import Skills from '@/components/Skills.astro'
 ---
 
 <!doctype html>
@@ -14,18 +18,23 @@ import Hero from '../components/Hero.astro'
     <!-- FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet"
     />
+
     <title>Cristina's Portfolio</title>
   </head>
   <body class="">
     <Header />
     <Hero />
-    <section id="about">
-      <h3>About me</h3>
-    </section>
+    <About id="about" />
+    <Experience id="experience" />
+    <Projects id="projects" />
+    <Skills id="skills" />
+
     <slot />
   </body>
 </html>
@@ -44,7 +53,7 @@ import Hero from '../components/Hero.astro'
     --secondary-100: #d7322d;
     /* #34302D */
     --font-primary-100: 'Inter', system-ui;
-    --font-primary-200: 'Cutive Mono', monospace;
+    --font-primary-200: 'Roboto Mono', monospace;
     --font-secondary: 'Double_Tracker', serif;
   }
 
@@ -62,6 +71,7 @@ import Hero from '../components/Hero.astro'
 
   html {
     overflow-y: scroll;
+    overflow-x: hidden;
     scroll-behavior: smooth;
   }
 
@@ -70,21 +80,31 @@ import Hero from '../components/Hero.astro'
     font-family: 'Inter', serif;
     background: var(--bg-primary);
     color: var(--primary-100);
-    overflow-y: scroll;
-    scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   section {
-    max-width: 1250px;
-    margin: 0 30px;
+    max-width: 1024px;
+
+    position: relative;
   }
 
-  @media (min-width: 1250px) {
+  strong {
+    font-weight: 800;
+  }
+
+  @media (max-width: 1100px) {
     section {
-      max-width: 1250px;
+      margin: 0 30px;
+    }
+  }
+  @media (min-width: 1100px) {
+    section {
+      max-width: 1024px;
       margin: 0 auto;
     }
   }
+
   input,
   button,
   textarea,
@@ -92,12 +112,14 @@ import Hero from '../components/Hero.astro'
     font: inherit;
   }
 
-  p {
+  p,
+  li {
     text-wrap: pretty;
     font-family: var(--font-primary-200);
     margin: 0;
-    font-size: 20px;
-    line-height: 1.5;
+    font-size: 16px;
+    line-height: 1.7;
+    letter-spacing: 0.5px;
   }
 
   h1,
@@ -108,6 +130,54 @@ import Hero from '../components/Hero.astro'
     font-weight: 100;
     width: fit-content;
     margin: 0;
+    text-transform: capitalize;
+  }
+
+  h1 {
+    font-family: var(--font-secondary);
+    color: var(--secondary-100);
+    font-size: 44px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    max-width: 320px;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 30px;
+    letter-spacing: 4px;
+  }
+
+  h3 {
+    font-size: 28px;
+    font-weight: 600;
+    padding: 20px 0;
+  }
+
+  h4 {
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 78px;
+      max-width: fit-content;
+    }
+    h2 {
+      font-size: 56px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    h1 {
+      font-size: 90px;
+      max-width: fit-content;
+    }
+    h2 {
+      font-size: 48px;
+    }
   }
 
   img,
@@ -125,6 +195,11 @@ import Hero from '../components/Hero.astro'
     color: var(--primary-100);
     text-decoration: none;
   }
+  [data-icon] {
+    font-size: 1.5rem;
+    color: var(--primary-100);
+    height: 30px;
+  }
 
   @media (prefers-reduced-motion: reduce) {
     *,
@@ -136,8 +211,5 @@ import Hero from '../components/Hero.astro'
       scroll-behavior: auto !important;
       transition: none;
     }
-  }
-  h3 {
-    margin: 500px 0;
   }
 </style>

@@ -1,12 +1,13 @@
 {
   "basics": {
     "name": "Cristina Romero",
-    "label": "Web Developer",
-    "image": "/assets/portrait.svg",
+    "position": "Web Developer",
+    "label": "Web Developer con <strong>3 años</strong> de experiencia, especializada en el diseño y desarrollo de aplicaciones y sitios web <strong>atractivos, intuitivos y funcionales.</strong>",
+    "image": "assets/portrait.svg",
     "email": "cris.rom.lopez@gmail.com",
     "phone": "+34 660827820",
     "url": "https://cristina-romero-portfolio.netlify.app/",
-    "summary": "A summary of John Doe…",
+    "summary": "Trabajo como Web Developer desde Barcelona y cuento con <strong>tres años de experiencia</strong>, especialmente en desarrollo Frontend.\n Me especializo en el diseño y desarrollo de aplicaciones y sitios web atractivos, intuitivos y funcionales utilizando tecnologías como <strong>HTML, Javascript, React y.</strong> Domino especialmente <strong>CSS </strong>(también algunos de sus frameworks más populares como <strong>Tailwind</strong>) y el <strong>diseño web responsive </strong>, buscando siempre el pixel perfect y la excelencia de forma resolutiva. \n Actualmente trabajo en Xeria Digital, empresa tecnológica especializada en dar soluciones a clientes del sector de las ferias y eventos.\n Anteriormente trabajé en una pequeña startup del sector de la bioinformática.\n Además soy estudiante del <strong>Grado en Ciencia de Datos</strong> en la UOC desde 2022. Gracias a ello, he aprendido lenguajes como <strong>Python</strong> o <strong>R</strong> y a aplicarlos en el análisis y visualización de datos o el Machine Learning.",
     "location": {
       "city": "Barcelona",
       "countryCode": "ES",
@@ -14,93 +15,129 @@
     },
     "profiles": [
       {
-        "network": "Twitter",
-        "username": "john",
-        "url": "https://twitter.com/john"
+        "network": "LinkedIn",
+        "url": "https://www.linkedin.com/in/cristina-romero-lopez/",
+        "icon": "linkedin"
+      },
+      {
+        "network": "Github",
+        "url": "https://github.com/ccrolo",
+        "icon": "github"
+      },
+      {
+        "network": "Instagram",
+        "url": "https://www.instagram.com/larom_cris/",
+        "icon": "instagram"
       }
+    ],
+    "hobbies": [
+      "travel",
+      "photo",
+      "bike",
+      "code",
+      "japanese",
+      "music",
+      "ramen",
+      "puzzle",
+      "dogs"
     ]
   },
   "work": [
     {
-      "name": "Company",
-      "position": "President",
-      "url": "https://company.com",
-      "startDate": "2013-01-01",
-      "endDate": "2014-01-01",
-      "summary": "Description…",
-      "highlights": ["Started the company"]
+      "name": "Xeria Digital",
+      "logo": "xeria",
+      "position": "Frontend Developer",
+      "url": "https://www.xeria.es/",
+      "startDate": "2023",
+      "endDate": null,
+      "summary": "Responsable del diseño y creación de aplicaciones web, mailing y formularios según la identidad visual de nuestros clientes.\n Encargada de mejorar de forma significativa el diseño y experiencia de usuario de herramientas clave como el área privada de clientes y el área de Networking.\nTotal desarrollo de nuestra web corporativa y contribución en su diseño de manera parcial."
+    },
+    {
+      "name": "Medbioinformatics",
+      "logo": "medbio",
+      "position": "Web Developer",
+      "url": "https://www.medbioinformatics.com/",
+      "startDate": "2022",
+      "endDate": "2023",
+      "summary": "Responsable de la mejora y desarrollo de nuevas funcionalidades en Disgenet Plus, el producto principal de la empresa, incluyendo soluciones para la visualización de los datos desde la versión 18 a la 22 y la migración de los usuarios de la aplicación con Amazon Cognito (AWS). Además me encargué del mantenimiento y mejora de la web corporativa y de su posicionamiento SEO."
     }
   ],
   "education": [
     {
-      "institution": "University",
-      "url": "https://institution.com/",
-      "area": "Software Development",
-      "studyType": "Bachelor",
-      "startDate": "2011-01-01",
-      "endDate": "2013-01-01",
-      "score": "4.0",
-      "courses": ["DB1101 - Basic SQL"]
-    }
-  ],
-  "awards": [
+      "institution": "Universitat Oberta de Catalunya",
+      "url": "https://www.uoc.edu/es",
+      "area": "Ciencia de Datos Aplicada",
+      "studyType": "Grado",
+      "startDate": "2022-09",
+      "endDate": null
+    },
     {
-      "title": "Award",
-      "date": "2014-11-01",
-      "awarder": "Company",
-      "summary": "There is no spoon."
-    }
-  ],
-  "certificates": [
-    {
-      "name": "Certificate",
-      "date": "2021-11-07",
-      "issuer": "Company",
-      "url": "https://certificate.com"
-    }
-  ],
-  "publications": [
-    {
-      "name": "Publication",
-      "publisher": "Company",
-      "releaseDate": "2014-10-01",
-      "url": "https://publication.com",
-      "summary": "Description…"
+      "institution": "Neoland",
+      "url": "https://neoland.es/",
+      "area": "Fulstack Development",
+      "studyType": "Bootcamp",
+      "startDate": "2022-01",
+      "endDate": "2022-03"
     }
   ],
   "skills": [
     {
-      "name": "Web Development",
-      "level": "Master",
-      "keywords": ["HTML", "CSS", "JavaScript"]
+      "category": "Lenguajes programación",
+      "items": ["JavaScript", "Python", "R", "HTML"]
+    },
+    {
+      "category": "Frontend Frameworks",
+      "items": ["React", "Astro"]
+    },
+    {
+      "category": "CSS & Frameworks",
+      "items": ["CSS", "Bootstrap", "Tailwind"]
+    },
+    {
+      "category": "Librerías de datos",
+      "items": ["Pandas", "Matplotlib", "Numpy"]
+    },
+    {
+      "category": "Herramientas",
+      "items": ["Figma", "Illustrator", "Photoshop", "Git", "Vite"]
     }
   ],
   "languages": [
     {
-      "language": "English",
-      "fluency": "Native speaker"
-    }
-  ],
-  "interests": [
+      "language": "Español",
+      "fluency": "Nativo"
+    },
     {
-      "name": "Wildlife",
-      "keywords": ["Ferrets", "Unicorns"]
-    }
-  ],
-  "references": [
+      "language": "Catalán",
+      "fluency": "Nativo"
+    },
     {
-      "name": "Jane Doe",
-      "reference": "Reference…"
+      "language": "Inglés",
+      "fluency": "B1+"
+    },
+    {
+      "language": "Francés",
+      "fluency": "A2"
     }
   ],
   "projects": [
     {
-      "name": "Project",
-      "startDate": "2019-01-01",
-      "endDate": "2021-01-01",
-      "description": "Description...",
-      "highlights": ["Won award at AIHacks 2016"],
-      "url": "https://project.com/"
+      "name": "Xeria Digital",
+      "description": "Web Corporativa de Xeria Digital, desarrollada con HTML, CSS y Javascript. Desarrollo total de la website y contribución en el diseño.",
+      "url": "https://www.xeria.es/",
+      "image": "assets/xeria.png"
+    },
+    {
+      "name": "Madrid Fusión 2024",
+      "description": "Landing page para la feria de alimentación Madrid Fusión de 2024, utilizando tecnologías como HTML, CSS, Javascript y JQuery. Maquetación web partiendo del diseño aportado por el cliente.",
+      "url": "https://2024.madridfusion.net/",
+      "image": "assets/madrid-fusion.png"
+    },
+    {
+      "name": "Disgenet Plus",
+      "description": "Extensa base de datos de asociaciones entre genes y enfermedades, desarrollada con React, CSS, React Data Grid. Desarrollo de funcionalidades y mejora del código desde la versión 18 a la 22.",
+      "url": "https://disgenet.com/",
+      "image": "assets/disgenet.png"
     }
   ]
 }

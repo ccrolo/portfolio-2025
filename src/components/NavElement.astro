@@ -2,12 +2,16 @@
 const { id, title } = Astro.props
 ---
 
-<a href={id}>{title}</a>
+<a href={id} class="nav-element">{title}</a>
 
 <style>
   a {
     text-transform: capitalize;
     font-weight: 600;
     font-size: 16px;
+    transition: color 0.4s linear;
+  }
+  a:hover {
+    color: var(--secondary-100);
   }
 </style>

@@ -1,0 +1,26 @@
+---
+const { id, title } = Astro.props
+---
+
+<section id={id}>
+  <div class="line-section"></div>
+  <h3>{title}</h3>
+  <slot />
+</section>
+
+<style>
+  section {
+    margin-top: 60px;
+    scroll-margin-top: 80px;
+  }
+  @media (min-width: 768px) {
+    section {
+      margin-top: 80px;
+    }
+  }
+  .line-section {
+    width: 100%;
+    height: 1px;
+    background-color: var(--primary-100);
+  }
+</style>
