@@ -1,12 +1,13 @@
 ---
 import Section from '@/layouts/Section.astro'
 import { work } from '@cv'
+import { Icon } from 'astro-icon/components'
 ---
 
 <Section id="experience" title="experiencia">
   {
     work.map((job) => {
-      const { name, position, startDate, endDate, summary } = job
+      const { name, logo, position, startDate, endDate, summary } = job
       return (
         <article>
           <div class="info-position">
@@ -15,11 +16,12 @@ import { work } from '@cv'
               <span class="circle" />
               {name}
             </h4>
+            <Icon name={logo} />
+            <p class="position">{position}</p>
             <p class="date">
               {startDate ? startDate : 'Actualidad'} -
               {endDate ? endDate : 'Actualidad'}
             </p>
-            <p>{position}</p>
           </div>
           <ul>
             {summary.split('\n').map((line) => (
@@ -76,13 +78,28 @@ import { work } from '@cv'
     }
   }
 
+  [data-icon] {
+    display: none;
+  }
+
+  .position {
+    color: var(--secondary-100);
+  }
   @media (min-width: 768px) {
     .info-position {
       grid-template-columns: 1fr 1fr;
       padding: 0;
     }
-    .date {
+    [data-icon] {
+      display: block;
+      grid-column: 1;
+    }
+    p {
       justify-self: flex-end;
+      grid-column: 2;
+    }
+    .position {
+      grid-row: 1;
     }
   }
   li {

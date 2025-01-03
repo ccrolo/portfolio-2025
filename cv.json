@@ -2,12 +2,12 @@
   "basics": {
     "name": "Cristina Romero",
     "position": "Web Developer",
-    "label": "Web Developer con 3 años de experiencia, especializada en el diseño y desarrollo de aplicaciones y sitios web atractivos, intuitivos y funcionales.",
+    "label": "Web Developer con <strong>3 años</strong> de experiencia, especializada en el diseño y desarrollo de aplicaciones y sitios web <strong>atractivos, intuitivos y funcionales.</strong>",
     "image": "src/assets/portrait.svg",
     "email": "cris.rom.lopez@gmail.com",
     "phone": "+34 660827820",
     "url": "https://cristina-romero-portfolio.netlify.app/",
-    "summary": "Trabajo como Web Developer desde Barcelona y cuento con tres años de experiencia, especialmente en desarrollo Frontend.\n Me especializo en el diseño y desarrollo de aplicaciones y sitios web atractivos, intuitivos y funcionales utilizando tecnologías como HTML, Javascript y React. Domino especialmente CSS (también algunos de sus frameworks más populares como Tailwind) y el diseño web responsive, buscando siempre el pixel perfect y la excelencia de forma resolutiva. \n Actualmente trabajo en Xeria Digital, empresa tecnológica especializada en dar soluciones a clientes del sector de las ferias y eventos.\n Anteriormente trabajé en una pequeña startup del sector de la bioinformática.\n Además soy estudiante del Grado en Ciencia de Datos en la UOC desde 2022. Gracias a ello, he aprendido lenguajes como Python o R y a aplicarlos en el análisis y visualización de datos o el Machine Learning.",
+    "summary": "Trabajo como Web Developer desde Barcelona y cuento con <strong>tres años de experiencia</strong>, especialmente en desarrollo Frontend.\n Me especializo en el diseño y desarrollo de aplicaciones y sitios web atractivos, intuitivos y funcionales utilizando tecnologías como <strong>HTML, Javascript, React y Astro.</strong> Domino especialmente <strong>CSS </strong>(también algunos de sus frameworks más populares como <strong>Tailwind</strong>) y el <strong>diseño web responsive </strong>, buscando siempre el pixel perfect y la excelencia de forma resolutiva. \n Actualmente trabajo en Xeria Digital, empresa tecnológica especializada en dar soluciones a clientes del sector de las ferias y eventos.\n Anteriormente trabajé en una pequeña startup del sector de la bioinformática.\n Además soy estudiante del <strong>Grado en Ciencia de Datos</strong> en la UOC desde 2022. Gracias a ello, he aprendido lenguajes como <strong>Python</strong> o <strong>R</strong> y a aplicarlos en el análisis y visualización de datos o el Machine Learning.",
     "location": {
       "city": "Barcelona",
       "countryCode": "ES",
@@ -45,6 +45,7 @@
   "work": [
     {
       "name": "Xeria Digital",
+      "logo": "xeria",
       "position": "Frontend Developer",
       "url": "https://www.xeria.es/",
       "startDate": "2023",
@@ -53,6 +54,7 @@
     },
     {
       "name": "Medbioinformatics",
+      "logo": "medbio",
       "position": "Web Developer",
       "url": "https://www.medbioinformatics.com/",
       "startDate": "2022",
