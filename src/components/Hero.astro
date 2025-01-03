@@ -107,14 +107,27 @@ const { city } = location
     .location {
       display: flex;
       gap: 10px;
-      padding: 20px 0;
+      padding: 20px 0 0;
+      align-items: center;
+
+      p {
+        font-family: var(--font-primary-100);
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+    @media (min-width: 480px) {
+      .location {
+        padding: 20px 0;
+      }
     }
 
     .contact {
       display: flex;
-      gap: 20px;
+      gap: 10px;
       padding: 10px 0;
     }
+
     a {
       width: 40px;
       height: 40px;
@@ -147,9 +160,6 @@ const { city } = location
       figure {
         width: 126px;
         top: 130px;
-        /* justify-self: flex-end;
-        margin: unset;
-        position: unset; */
       }
     }
     @media (min-width: 768px) {

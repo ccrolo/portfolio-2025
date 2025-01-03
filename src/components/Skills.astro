@@ -22,14 +22,14 @@ import { skills, languages } from '@cv'
     }
   </div>
   <div class="languages-container">
-    <h4>Idiomas:</h4>
+    <h3>Idiomas</h3>
     <ul>
       {
         languages.map((lang) => {
           const { language, fluency } = lang
           return (
             <li>
-              {language}:<span>{fluency}</span>{' '}
+              {language}: <span>{fluency}</span>{' '}
             </li>
           )
         })
@@ -40,12 +40,10 @@ import { skills, languages } from '@cv'
 
 <style>
   .skills-container {
+    padding: 40px 0;
     display: grid;
-
-    gap: 20px;
-    h4 {
-      color: var(--secondary-100);
-    }
+    row-gap: 40px;
+    column-gap: 30px;
   }
 
   @media (min-width: 600px) {

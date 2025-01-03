@@ -10,8 +10,13 @@ const { id, title } = Astro.props
 
 <style>
   section {
-    margin-top: 80px;
+    margin-top: 60px;
     scroll-margin-top: 80px;
+  }
+  @media (min-width: 768px) {
+    section {
+      margin-top: 80px;
+    }
   }
   .line-section {
     width: 100%;
