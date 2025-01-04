@@ -19,7 +19,7 @@ const { summary, hobbies } = basics
   {
     summary.split('\n').map((line) => (
       <Fragment>
-        <p set:html={line} />
+        <p class="animation-show" set:html={line} />
       </Fragment>
     ))
   }

@@ -41,7 +41,7 @@ import { Icon } from 'astro-icon/components'
           <ul>
             {summary.split('\n').map((line) => (
               <Fragment>
-                <li>
+                <li class="animation-show">
                   <span>-</span> {line}
                 </li>
               </Fragment>
@@ -131,7 +131,7 @@ import { Icon } from 'astro-icon/components'
       padding: 0 0 10px 20px;
     }
     span {
-      visibility: visible;
+      display: initial;
       position: absolute;
       top: 0;
       left: 0;

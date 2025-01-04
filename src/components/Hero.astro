@@ -2,15 +2,14 @@
 import { basics } from '@cv'
 import { Icon } from 'astro-icon/components'
 
-const { name, position, label, image, email, phone, profiles, location } =
-  basics
+const { name, position, label, image, email, profiles, location } = basics
 const { city } = location
 ---
 
 <section>
   <div class="hero-text">
-    <h1>{name}</h1>
-    <h2>{position}</h2>
+    <h1 class="animation-name">{name}</h1>
+    <h2 class="animation-position">{position}</h2>
     <p set:html={label} />
     <div class="location">
       <Icon name="location" />
@@ -29,7 +28,7 @@ const { city } = location
           </a>
         )
       }
-      {
+      <!-- {
         phone && (
           <a
             href={`tel:{${phone}`}
@@ -40,7 +39,7 @@ const { city } = location
             <Icon name="phone" />
           </a>
         )
-      }
+      } -->
       {
         profiles.map((profile) => {
           const { network, url, icon } = profile
