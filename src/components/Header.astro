@@ -1,6 +1,9 @@
 ---
 import { Icon } from 'astro-icon/components'
 import NavElement from './NavElement.astro'
+import { basics } from '@cv'
+
+const { logo } = basics
 ---
 
 <header>
@@ -10,6 +13,7 @@ import NavElement from './NavElement.astro'
     </button>
 
     <div id="menu-container" class="closed">
+      <a class="logo" href=""><img src={logo} alt="Larom Digital Logo" /></a>
       <button id="remove-icon">
         <Icon name="remove" />
       </button>
@@ -55,11 +59,25 @@ import NavElement from './NavElement.astro'
       }
     })
   })
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY > 0
+    if (scrolled) {
+      headerContainer.classList.add('scrolled')
+    } else {
+      headerContainer.classList.remove('scrolled')
+    }
+  })
+  document.addEventListener('DOMContentLoaded', () => {
+    const headerContainer = document.querySelector('.header-container')
+    if (headerContainer) {
+      headerContainer.classList.add('transition-enabled')
+    }
+  })
 </script>
 
 <style>
   .header-container {
-    background: #dad7cf75;
+    background: var(--bg-primary);
     position: fixed;
     backdrop-filter: blur(15px);
     z-index: 5;
@@ -68,13 +86,19 @@ import NavElement from './NavElement.astro'
     display: flex;
     justify-content: flex-end;
     height: 60px;
-    transition: height 0.3s ease-in-out;
-    @starting-style {
-      height: 100vh;
+    transition: none;
+    &.transition-enabled {
+      transition: height 0.3s ease-in-out;
     }
   }
 
+  .scrolled {
+    -webkit-box-shadow: 0px 2px 14px 0px rgb(150 145 145 / 75%);
+    -moz-box-shadow: 0px 2px 14px 0px rgb(150 145 145 / 75%);
+    box-shadow: 0px 2px 14px 0px rgb(150 145 145 / 75%);
+  }
   .header-container[opened] {
+    background: #dad7cf75;
     height: 100vh;
     @starting-style {
       height: initial;
@@ -91,13 +115,13 @@ import NavElement from './NavElement.astro'
     bottom: 0;
     left: 30px;
     right: 30px;
-    margin: 30px 0;
+    margin: 100px 0 0;
+    max-height: 500px;
     background: #f4f1e78c;
     backdrop-filter: blur(15px);
     border: 3px solid var(--primary-100);
     border-radius: 15px;
     place-items: center;
-    padding-bottom: 60px;
     z-index: 5;
     scale: 0;
     transition:
@@ -114,6 +138,9 @@ import NavElement from './NavElement.astro'
       scale: 0;
     }
   }
+  .logo {
+    display: none;
+  }
   nav {
     display: grid;
     place-items: center;
@@ -129,12 +156,16 @@ import NavElement from './NavElement.astro'
       width: 100%;
       border: none;
       border-radius: 0;
-      margin: 0;
+      margin: 0 auto;
       bottom: unset;
       justify-content: end;
       background: transparent;
       backdrop-filter: none;
       scale: 1;
+      max-width: 1024px;
+    }
+    .logo {
+      display: initial;
     }
     nav {
       display: flex;

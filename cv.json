@@ -4,6 +4,7 @@
     "position": "Web Developer",
     "label": "Web Developer con <strong>3 años</strong> de experiencia, especializada en el diseño y desarrollo de aplicaciones y sitios web <strong>atractivos, intuitivos y funcionales.</strong>",
     "image": "assets/portrait.svg",
+    "logo": "assets/logo.svg",
     "email": "cris.rom.lopez@gmail.com",
     "phone": "+34 660827820",
     "url": "https://cristina-romero-portfolio.netlify.app/",
@@ -50,7 +51,7 @@
       "url": "https://www.xeria.es/",
       "startDate": "2023",
       "endDate": null,
-      "summary": "Responsable del diseño y creación de aplicaciones web, mailing y formularios según la identidad visual de nuestros clientes.\n Encargada de mejorar de forma significativa el diseño y experiencia de usuario de herramientas clave como el área privada de clientes y el área de Networking.\nTotal desarrollo de nuestra web corporativa y contribución en su diseño de manera parcial."
+      "summary": "Responsable del diseño y creación de aplicaciones web, mailing y formularios según la identidad visual de nuestros clientes.\n Encargada de mejorar el diseño y la experiencia de usuario de herramientas clave como el área privada de clientes y el área de Networking.\nTotal desarrollo de nuestra web corporativa y contribución en su diseño de manera parcial."
     },
     {
       "name": "Medbioinformatics",
@@ -59,7 +60,7 @@
       "url": "https://www.medbioinformatics.com/",
       "startDate": "2022",
       "endDate": "2023",
-      "summary": "Responsable de la mejora y desarrollo de nuevas funcionalidades en Disgenet Plus, el producto principal de la empresa, incluyendo soluciones para la visualización de los datos desde la versión 18 a la 22 y la migración de los usuarios de la aplicación con Amazon Cognito (AWS). Además me encargué del mantenimiento y mejora de la web corporativa y de su posicionamiento SEO."
+      "summary": "Responsable de la mejora y desarrollo de nuevas funcionalidades en Disgenet Plus, el producto principal de la empresa, incluyendo soluciones para la visualización de los datos desde la versión 18 a la 22 y la migración de los usuarios de la aplicación con Amazon Cognito (AWS).\nAdemás me encargué del mantenimiento y mejora de la web corporativa y de su posicionamiento SEO."
     }
   ],
   "education": [
