@@ -15,8 +15,6 @@ import Skills from '@/components/Skills.astro'
     <link rel="icon" type="image/svg+xml" href="/portrait.svg" />
     <meta name="generator" content={Astro.generator} />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="src/styles/animations.css" />
     <!-- FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -44,6 +42,7 @@ import Skills from '@/components/Skills.astro'
 </html>
 
 <style is:global>
+  @import '@/styles/animations.css';
   @font-face {
     font-family: 'Double_Tracker';
     src: url('/fonts/Double_Tracker.woff2') format('woff2');
