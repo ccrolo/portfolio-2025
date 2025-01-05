@@ -1,0 +1,41 @@
+---
+import { Icon } from 'astro-icon/components'
+---
+
+<footer>
+  <div class="footer-container">
+    <a href="">
+      <Icon name="up" />
+    </a>
+    <div class="line-section"></div>
+    <p>
+      Diseño creado en <strong>Figma</strong> e <strong>Illustrator</strong> y construido
+      con <strong>Astro</strong>.
+    </p>
+  </div>
+</footer>
+
+<style>
+  footer {
+    width: 100%;
+    padding: 0 30px;
+  }
+
+  .footer-container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 30px 0 60px;
+    display: grid;
+  }
+
+  a {
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    background-color: #fff;
+    justify-self: center;
+  }
+</style>

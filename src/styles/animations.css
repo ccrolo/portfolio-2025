@@ -1,0 +1,111 @@
+/* ANIMACIÓN ELEMENTOS APARECEN EN EL SITIO */
+
+@keyframes appear-in {
+  0% {
+    scale: 0;
+  }
+
+  45% {
+    scale: 1.1;
+  }
+  80% {
+    scale: 1;
+  }
+}
+@keyframes img-animation {
+  0% {
+    scale: 1;
+  }
+
+  50% {
+    scale: 0;
+  }
+}
+
+.img-appear {
+  animation: appear-in 0.6s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+
+.projects-container {
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+
+  animation-timeline: --image;
+  animation-name: appear-in;
+
+  animation-range: entry 25% cover 40%;
+  animation-fill-mode: both;
+}
+
+/* ANIMACIÓN ICONOS */
+
+@keyframes appear-icons {
+  0% {
+    scale: 0;
+  }
+  75% {
+    scale: 1.5;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+/* ANIMACIÓN PARA LOS PÁRRAFOS */
+
+@keyframes show {
+  from {
+    transform: translateY(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animation-show {
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+
+  animation-timeline: --image;
+  animation-name: show;
+
+  animation-range: entry 25% cover 20%;
+  animation-fill-mode: both;
+}
+
+/* ANIMACIÓN ESCALAR NOMBRE */
+@keyframes scale-up {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 0;
+  }
+}
+
+section {
+  view-timeline: --scroll;
+}
+.scale {
+  animation: scale-up both ease-in-out;
+  animation-timeline: --scroll;
+  animation-range: exit 0% exit 100%;
+}
+
+/* ANIMACIÓN POSICIÓN */
+
+@keyframes scale-up-ver-center {
+  0% {
+    transform: scaleY(0.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.animation-position {
+  animation: scale-up-ver-center 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+    both;
+}

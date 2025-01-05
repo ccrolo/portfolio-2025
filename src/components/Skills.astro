@@ -9,7 +9,7 @@ import { skills, languages } from '@cv'
       skills.map((skill) => {
         const { category, items } = skill
         return (
-          <div>
+          <div class="animation-show ">
             <h4>{category}</h4>
             <ul>
               {items.map((item) => (
@@ -21,7 +21,7 @@ import { skills, languages } from '@cv'
       })
     }
   </div>
-  <div class="languages-container">
+  <div class="languages-container animation-show">
     <h3>Idiomas</h3>
     <ul>
       {
@@ -42,7 +42,7 @@ import { skills, languages } from '@cv'
   .skills-container {
     padding: 20px 0;
     display: grid;
-    row-gap: 40px;
+    row-gap: 10px;
     column-gap: 30px;
   }
 
@@ -50,6 +50,7 @@ import { skills, languages } from '@cv'
     .skills-container {
       grid-template-columns: 1fr 1fr;
       padding: 40px 0;
+      row-gap: 40px;
     }
   }
 
@@ -67,7 +68,7 @@ import { skills, languages } from '@cv'
     width: fit-content;
     min-width: 80px;
     text-align: center;
-    font-size: 16px;
+    background-color: #fff;
     text-transform: capitalize;
   }
 
