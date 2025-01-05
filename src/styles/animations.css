@@ -1,4 +1,4 @@
-/* ANIMACIÓN APARECEN EN EL SITIO */
+/* ANIMACIÓN ELEMENTOS APARECEN EN EL SITIO */
 
 @keyframes appear-in {
   0% {
@@ -6,7 +6,7 @@
   }
 
   45% {
-    scale: 1.2;
+    scale: 1.1;
   }
   80% {
     scale: 1;
@@ -33,7 +33,7 @@
   animation-timeline: --image;
   animation-name: appear-in;
 
-  animation-range: entry 25% cover 30%;
+  animation-range: entry 25% cover 40%;
   animation-fill-mode: both;
 }
 
