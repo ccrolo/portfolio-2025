@@ -58,10 +58,17 @@ import { Icon } from 'astro-icon/components'
     display: grid;
     gap: 5px;
   }
+
+  article:last-of-type {
+    margin-top: 20px;
+  }
   @media (min-width: 768px) {
     article {
       padding: 30px;
       gap: 20px;
+    }
+    article:last-of-type {
+      margin-top: 0;
     }
   }
 
