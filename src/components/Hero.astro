@@ -8,7 +8,7 @@ const { city } = location
 
 <section>
   <div class="hero-text">
-    <h1 class="animation-name">{name}</h1>
+    <h1 class="scale">{name}</h1>
     <h2 class="animation-position">{position}</h2>
     <p set:html={label} />
     <div class="location">
@@ -61,7 +61,11 @@ const { city } = location
     </div>
   </div>
   <figure>
-    <img src={image} alt="Cristina Romero" />
+    <img
+      class="img-appear img-appear-on-load"
+      src={image}
+      alt="Cristina Romero"
+    />
   </figure>
 </section>
 

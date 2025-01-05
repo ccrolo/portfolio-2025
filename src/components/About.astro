@@ -52,20 +52,11 @@ const { summary, hobbies } = basics
 </style>
 
 <script>
-  //   document.addEventListener('DOMContentLoaded', () => {
-  //     const hobbies = document.querySelectorAll('.hobby')
-  //     let second = 0.1
+  const hobbies = document.querySelectorAll('.hobby')
+  let second = 0.1
 
-  //     const observer = new IntersectionObserver((entries) => {
-  //       entries.forEach((entry) => {
-  //         const element = entry.target as HTMLElement
-
-  //         if (entry.isIntersecting) {
-  //           element.style.animation = `slide-left ${(second += 0.04)}s linear both`
-  //         }
-  //       })
-  //     })
-  //     hobbies.forEach((hobby) => observer.observe(hobby))
-  //   })
-  // Animación fade-in
+  hobbies.forEach((hobby) => {
+    ;(hobby as HTMLElement).style.animation =
+      `appear-icons ${(second += 0.1)}s ease-in-out`
+  })
 </script>
