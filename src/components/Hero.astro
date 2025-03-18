@@ -1,4 +1,5 @@
 ---
+import Section from '@/layouts/Section.astro'
 import { basics } from '@cv'
 import { Icon } from 'astro-icon/components'
 
@@ -6,7 +7,7 @@ const { name, position, label, image, email, profiles, location } = basics
 const { city } = location
 ---
 
-<section>
+<Section id="hero" title="">
   <div class="hero-text">
     <h1 class="scale">{name}</h1>
     <h2 class="animation-position">{position}</h2>
@@ -67,7 +68,7 @@ const { city } = location
       alt="Cristina Romero"
     />
   </figure>
-</section>
+</Section>
 
 <style>
   section {
@@ -121,6 +122,16 @@ const { city } = location
       padding: 20px 0;
     }
   }
+  @media (min-width: 600px) {
+    p {
+      max-width: 500px;
+    }
+  }
+  @media (min-width: 1024px) {
+    p {
+      max-width: initial;
+    }
+  }
 
   .contact {
     display: flex;
@@ -154,13 +165,13 @@ const { city } = location
     position: absolute;
     width: 82px;
     right: 0;
-    top: 72px;
+    top: 15px;
   }
 
   @media (min-width: 480px) {
     figure {
       width: 126px;
-      top: 130px;
+      top: 20px;
     }
   }
   @media (min-width: 768px) {

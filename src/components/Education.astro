@@ -1,0 +1,135 @@
+---
+import Section from '@/layouts/Section.astro'
+import { education } from '@cv'
+import { Icon } from 'astro-icon/components'
+---
+
+<Section id="education" title="formación">
+  {
+    education.map((edu) => {
+      const { institution, url, area, studyType, startDate, endDate } = edu
+      return (
+        <article>
+          <div class="info-education">
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={institution}
+            >
+              <h4 class="area animation-show">
+                {' '}
+                <span class="circle" />
+                {area}
+              </h4>
+            </a>
+            <p class="institution animation-show">{institution}</p>
+            <p class="education animation-show">{studyType}</p>
+
+            <p class="date animation-show">
+              {startDate ? startDate : 'Actualidad'} -
+              {endDate ? endDate : 'Actualidad'}
+            </p>
+          </div>
+        </article>
+      )
+    })
+  }
+</Section>
+
+<style>
+  article {
+    display: grid;
+    gap: 5px;
+  }
+
+  article:last-of-type {
+    margin-top: 20px;
+  }
+  @media (min-width: 768px) {
+    article {
+      padding: 30px;
+      gap: 20px;
+    }
+    article:last-of-type {
+      margin-top: 0;
+    }
+  }
+
+  h4 {
+    position: relative;
+  }
+  .circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--secondary-100);
+    display: inline-block;
+    left: -20px;
+    top: 8px;
+    position: absolute;
+  }
+  @media (min-width: 768px) {
+    .circle {
+      left: -30px;
+    }
+  }
+
+  .info-education {
+    display: grid;
+    padding: 20px 0 0 20px;
+
+    p {
+      font-family: var(--font-primary-100);
+      font-size: 18px;
+    }
+    .institution {
+      justify-self: flex-start;
+      grid-column: 1;
+    }
+  }
+
+  [data-icon] {
+    display: none;
+  }
+
+  .education {
+    color: var(--secondary-100);
+  }
+  @media (min-width: 768px) {
+    .info-education {
+      grid-template-columns: 1fr 1fr;
+      padding: 0;
+    }
+    [data-icon] {
+      display: block;
+      grid-column: 1;
+    }
+    p {
+      justify-self: flex-end;
+      grid-column: 2;
+    }
+    .education {
+      grid-row: 1;
+    }
+  }
+  li {
+    position: relative;
+    padding: 10px 0 0;
+  }
+  span {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    li {
+      padding: 0 0 10px 20px;
+    }
+    span {
+      display: initial;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+</style>

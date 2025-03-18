@@ -33,7 +33,7 @@
   animation-timeline: --image;
   animation-name: appear-in;
 
-  animation-range: entry 25% cover 40%;
+  animation-range: entry 5% cover 28%;
   animation-fill-mode: both;
 }
 
@@ -55,7 +55,7 @@
 
 @keyframes show {
   from {
-    transform: translateY(400px);
+    transform: translateY(50px);
     opacity: 0;
   }
   to {

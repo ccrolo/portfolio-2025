@@ -1,13 +1,13 @@
 {
   "basics": {
     "name": "Cristina Romero",
-    "position": "Web Developer",
-    "label": "Web Developer con <strong>3 años</strong> de experiencia, especializada en el diseño y desarrollo de aplicaciones y sitios web <strong>atractivos, intuitivos y funcionales.</strong>",
+    "position": "Web Developer & Designer",
+    "label": "Diseñadora y Desarrolladora Web con más de <strong>3 años</strong> de experiencia, especializada en la creación de aplicaciones y sitios web <strong>atractivos, intuitivos y funcionales.</strong>",
     "image": "assets/portrait.svg",
     "logo": "assets/logo.svg",
     "email": "cris.rom.lopez@gmail.com",
     "url": "https://cristina-romero-portfolio.netlify.app/",
-    "summary": "Trabajo como Web Developer desde Barcelona y cuento con <strong>tres años de experiencia</strong>, especialmente en desarrollo Frontend.\n Me especializo en el diseño y desarrollo de aplicaciones y sitios web atractivos, intuitivos y funcionales utilizando tecnologías como <strong>HTML, Javascript, React y.</strong> Domino especialmente <strong>CSS </strong>(también algunos de sus frameworks más populares como <strong>Tailwind</strong>) y el <strong>diseño web responsive </strong>, buscando siempre el pixel perfect y la excelencia de forma resolutiva.\n Empecé a ganar experiencia como desarrolladora web en una pequeña startup del sector de la bioinformática y actualmente trabajo en Xeria Digital, empresa especializada en cubrir todas las necesidades tecnológicas y digitales de clientes del sector de las ferias y eventos.\n Además soy estudiante del <strong>Grado en Ciencia de Datos</strong> en la UOC desde 2022. Gracias a ello, he aprendido lenguajes como <strong>Python</strong> o <strong>R</strong> y a aplicarlos en el análisis y visualización de datos o el Machine Learning.",
+    "summary": "Trabajo como Diseñadora y Desarrolladora web desde Barcelona y cuento con más de <strong>tres años de experiencia</strong>, especialmente en desarrollo Frontend y diseño UI.\n Me especializo en la creación de aplicaciones y sitios web atractivos, intuitivos y funcionales utilizando tecnologías como <strong>HTML, Javascript y React. </strong>Domino especialmente <strong>CSS </strong>(también algunos de sus frameworks más populares como <strong>Tailwind</strong>) y el <strong>diseño web responsive</strong>, buscando siempre el pixel perfect y la excelencia de forma resolutiva.\n Cuento con conocimientos en <strong>Python</strong> y algunas de sus librerías como <strong> Matplotlib y Pandas</strong>  que he adquirido en diferentes cursos y de forma autodidacta.\n Empecé a ganar experiencia como desarrolladora web en una pequeña startup del sector de la bioinformática y actualmente trabajo en Xeria Digital, empresa especializada en cubrir todas las necesidades tecnológicas y digitales de clientes del sector de las ferias y eventos.\n Además soy estudiante del <strong>Grado en Diseño y Creación Digitales</strong> en la UOC desde 2022. Gracias a ello estoy mejorando mis habilidades creativas y especializándome en el <strong>diseño UX/UI.</strong>",
     "location": {
       "city": "Barcelona",
       "countryCode": "ES",
@@ -66,9 +66,17 @@
     {
       "institution": "Universitat Oberta de Catalunya",
       "url": "https://www.uoc.edu/es",
-      "area": "Ciencia de Datos Aplicada",
+      "area": "Diseño y Creación Digitales",
       "studyType": "Grado",
-      "startDate": "2022-09",
+      "startDate": "09/2022",
+      "endDate": null
+    },
+    {
+      "institution": "IEBS Biztech School",
+      "url": "https://www.iebschool.com/",
+      "area": "Master en UX Product Design",
+      "studyType": "Master",
+      "startDate": "02/2025",
       "endDate": null
     },
     {
@@ -76,14 +84,14 @@
       "url": "https://neoland.es/",
       "area": "Fulstack Development",
       "studyType": "Bootcamp",
-      "startDate": "2022-01",
-      "endDate": "2022-03"
+      "startDate": "01/2022",
+      "endDate": "03/2022"
     }
   ],
   "skills": [
     {
       "category": "Lenguajes programación",
-      "items": ["JavaScript", "Python", "R", "HTML"]
+      "items": ["JavaScript", "Python", "HTML"]
     },
     {
       "category": "Frontend Frameworks",

@@ -5,6 +5,7 @@ import Hero from '../components/Hero.astro'
 import Experience from '@/components/Experience.astro'
 import Projects from '@/components/Projects.astro'
 import Skills from '@/components/Skills.astro'
+import Education from '@/components/Education.astro'
 import Footer from '@/components/Footer.astro'
 ---
 
@@ -31,10 +32,11 @@ import Footer from '@/components/Footer.astro'
   <body>
     <Header />
     <main>
-      <Hero />
+      <Hero id="hero" />
       <About id="about" />
       <Experience id="experience" />
       <Projects id="projects" />
+      <Education id="education" />
       <Skills id="skills" />
     </main>
     <slot />
@@ -158,6 +160,7 @@ import Footer from '@/components/Footer.astro'
   h2 {
     font-weight: 700;
     font-size: 36px;
+    max-width: 310px;
     margin-bottom: 30px;
     letter-spacing: 4px;
   }
@@ -165,7 +168,7 @@ import Footer from '@/components/Footer.astro'
   h3 {
     font-size: 28px;
     font-weight: 600;
-    padding: 20px 0;
+    padding: 0 0 20px;
   }
 
   h4 {
@@ -180,6 +183,7 @@ import Footer from '@/components/Footer.astro'
     }
     h2 {
       font-size: 56px;
+      max-width: initial;
     }
   }
 
@@ -189,7 +193,7 @@ import Footer from '@/components/Footer.astro'
       max-width: fit-content;
     }
     h2 {
-      font-size: 48px;
+      font-size: 40px;
     }
   }
 
@@ -219,6 +223,9 @@ import Footer from '@/components/Footer.astro'
     height: 3px;
     background-color: var(--primary-100);
     margin: 20px 0;
+  }
+  #hero .line-section {
+    display: none;
   }
 
   @media (prefers-reduced-motion: reduce) {

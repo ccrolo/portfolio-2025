@@ -33,6 +33,10 @@ import { projects } from '@cv'
     gap: 30px;
   }
 
+  .projects-container::-webkit-scrollbar {
+    display: none;
+  }
+
   @media (min-width: 600px) {
     .projects-container {
       grid-template-columns: repeat(3, 1fr);
